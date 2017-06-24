@@ -1,0 +1,146 @@
+body{
+	background-image: url(image/background.jpg);
+}
+ul{
+	color: #522a06;
+	font-size: 12px;
+}	
+a{
+	text-decoration-line: none;
+}
+#header{
+	
+	height: 190px;
+	background-image:url(image/banner.jpg);
+	background-size: 1245px 164px;
+	background-repeat: no-repeat;
+	width: 1245px;
+	position: top;
+}
+#logo{
+	
+	padding-top: 25px;
+	padding-left: 180px;
+
+}
+#banner{
+
+	width: 1240px;
+	height: 164px;
+	position: top;
+}
+#nav{	
+	height: 40px;
+	background-image: url(image/nav.jpg);
+	margin-top: 80px;
+	width: 1245px;
+}
+#nav_body_text{
+	width: 800px;
+	font-weight: bold;
+	margin-top: 7px;
+	margin-left: 130px;
+    float: left;
+}
+#search{
+	width: 200px;
+	margin-top: 7px;
+	margin-left: 10px;
+	float: left;
+}
+a.nav:link{
+	text-decoration-line: none;
+	font-size: 12px;
+}
+a.nav:visited{
+	text-decoration-line: none;
+	font-size: 12px;
+}
+a.nav:hover{
+	text-decoration-line: none;
+	font-size: 12px;
+}
+a.index:link{
+	text-decoration-line: none;
+	font-size: 12px;
+}
+a.index:visited{
+	text-decoration-line: none;
+	font-size: 12px;
+}
+a.index:hover{
+	color: black;
+	text-decoration-line: none;
+	font-size: 12px;
+}
+
+#content{
+	background-image: url(image/content——back.jpg);
+	border: 1px solid black;
+	width:845px;
+	height:900px;
+	margin:20px auto;
+}
+#content_left{
+	width: 300px;
+	height:560px;
+	float:left;
+}
+#content_right{
+	width:475px;
+	height:900px;
+	float:left;
+}
+.right_1{
+	width:475px;
+	height:600px;
+
+}
+.right_2{
+	float:bottom;
+	width:475px;
+	height:240px;
+}
+
+
+
+
+#foot{
+	background-image: url(images/foot.gif);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	height: 150px;
+	clear: all;
+}
+.foot_top{
+	width: 500px;
+	height: 40px;
+	margin-top: 25px;
+	margin-left: 380px;
+}
+a.foot_nav:link{
+	text-decoration-line: none;
+	color: #522a06;
+	font-size: 12px;
+	font-weight: bold;
+}
+a.foot_nav:visited{
+	color: #522a06;
+	text-decoration-line: none;
+	font-size: 12px;
+	font-weight: bold;
+}	
+a.foot_nav:hover{
+	color: #522a06;
+	text-decoration-line: none;
+	font-size: 12px;
+	font-weight: bold;
+}
+.foot_bottom{
+	width: 370px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 450px;
+	color: #522a06;
+	font-size: 12px;
+}
