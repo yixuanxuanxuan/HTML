@@ -1,0 +1,95 @@
+# HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>calculator</title>
+		<meta charset="utf-8">>
+		<Script type="text/javascript">
+			var str;
+			var numresult;
+			function onclicknum(nums) { 
+				str = document.getElementById("nummessege"); 
+				str.value = str.value + nums; 
+				} 
+			function onclickclear() { 
+			str = document.getElementById("nummessege"); 
+			str.value = ""; 
+			} 
+			function onclickresult() { 
+			str = document.getElementById("nummessege"); 
+			numresult = eval(str.value); 
+			str.value = numresult; 
+			}	 
+
+		</Script>
+	</head>
+
+	<body>
+	<table cellspacing="0" cellpadding="10" border="1" align="center">
+		<tr>
+			<td colspan="3">
+			<input type="text" id="nummessege"
+			</td>
+			<td>
+			<input type="button" value="C" id="clear" onclick="onclickclear()"  />  
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="button" value="1" id="1" onclick="onclicknum(1)">
+			</td>
+			<td>
+			<input type="button" value="2" id="2" onclick="onclicknum(2)">
+			</td>
+			<td>
+			<input type="button" value="3" id="3" onclick="onclicknum(3)">
+			</td>
+			<td>
+			<input type="button" value="+" id="add" onclick="onclicknum('+')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="button" value="4" id="4" onclick="onclicknum(4)">
+			</td>
+			<td>
+			<input type="button" value="5" id="5" onclick="onclicknum(5)">
+			</td>
+			<td>
+			<input type="button" value="6" id="6" onclick="onclicknum(6)">
+			</td>
+			<td>
+			<input type="button" value="-" id="-" onclick="onclicknum('-')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="button" value="7" id="7" onclick="onclicknum(7)">
+			</td>
+			<td>
+			<input type="button" value="8" id="8" onclick="onclicknum(8)">
+			</td>
+			<td>
+			<input type="button" value="9" id="9" onclick="onclicknum(9)">
+			</td>
+			<td>
+			<input type="button" value="*" id="*" onclick="onclicknum('*')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="button" value="0" id="0" onclick="onclicknum(0)">
+			</td>
+			<td>
+			<input type="button" value="." id="." onclick="onclicknum('.')">
+			</td>
+			<td>
+			<input type="button" value="=" id="result" onclick="onclickresult()" >
+			</td>
+			<td>
+			<input type="button" value="/" id="/" onclick="onclicknum('/')">
+			</td>
+		</tr>
+	</table>
+	</body>
+</html>
