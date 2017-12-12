@@ -1,0 +1,50 @@
+<html>
+<head>
+	<base href="https://raw.githubusercontent.com/LiuRann/web2-lab3/master/12.12%E4%BD%9C%E4%B8%9A/table.html">
+	<title>表格</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-size: 36px;
+		}
+		tr{
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+<table width="1000" border="1">
+		<tbody><tr height="30">
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</tbody><table width="1000" border="1">
+		<tbody><tr height="30">
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</tbody></table></table>
+	<input id="add" style="margin-left:840px;" onclick="addrow()" type="button" value="添加一行">
+	<input id="delete" style="margin-left:840px;" onclick="deleterow()" type="button" value="删除一行">
+	<script src="//htmlpreview.github.io/htmlpreview.min.js"></script>
+	<script>HTMLPreview.replaceAssets();</script>
+	<script src="jquery-3.2.1.slim.min.js" type="text/htmlpreview"></script>
+	<script type="text/htmlpreview">
+   	var t = document.getElementsByTagName('table');
+   	function addrow(){
+   		$(t).append("<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+    }
+    function deleterow(){
+    	$(t).find("tr:last").remove();
+    }
+    $(function(){    	
+    	$("table").delegate("tr","mouseover",function(){
+    		$(this).css("background-color","#E6E6FA ");
+    	})
+    	$("table").delegate("tr","mouseout",function(){
+    		$(this).css("background-color","#FFF");
+     	})
+     })
+</script>
+</body>
+</html>
