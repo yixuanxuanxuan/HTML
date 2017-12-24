@@ -1,0 +1,82 @@
+<！DOCTYPE html>
+< html >
+< head >
+	< title > </ title >
+	< meta  charset = “ utf-8 ” >
+	< script  src = “ js / jquery-3.2.1.slim.min.js ” > < / script >
+	< script  type = “ text / javascript ” >
+		$（文档）。准备好（功能（e）{
+			$（“ #username ”）。模糊（函数（e）{
+				var username =  $（“ #username ”）。val（）;
+				如果（username ==  “ ”）{
+					$（“ #spanUsername ”）。html（“用户名不能为空”）;
+				}
+				else {
+					$（“ #spanUsername ”）。hide（）;
+				}
+			}）;
+			$（“＃pwd1 ”）。模糊（函数（e）{
+				var pwd1 =  $（“＃pwd1 ”）。val（）;
+				if（pwd1 ==  “ ”）{
+					$（“＃spanPwd1 ”）。html（“密码不能为空”）;
+				}
+				else {
+					$（“＃spanPwd1 ”）。hide（）;
+				}
+			}）;
+			$（“＃pwd2 ”）。模糊（函数（e）{
+				var pwd2 =  $（“＃pwd2 ”）。val（）;
+				if（pwd2 ==  “ ”）{
+					$（“＃spanPwd2 ”）。html（“密码不能为空”）;
+				}
+				否则 ，如果（pwd2 ！=  $（“＃pwd1 ”）。VAL（））{
+					$（“＃spanPwd2 ”）。html（“两次密码不一致”）;
+				}
+				else {
+					$（“＃spanPwd2 ”）。hide（）;
+				}
+			}）;
+		}）;
+	< / script >
+</ head >
+< body >
+< div >
+	< form >
+		< table >
+			< tr >
+				< td >
+					用户名：
+				</ td >
+				< td >
+					< input  type = “ text ”  name = “ username ”  id = “ username ” >
+					< span  id = “ span User name ” > </ span >
+				</ td >
+			</ tr >
+			< tr >
+				< td >
+					密码：
+				</ td >
+				< td >
+					< input  type = “ password ”  name = “ pwd1 ”  id = “ pwd1 ” >
+					< span  id = “ spanPwd1 ” > </ span >
+				</ td >
+			</ tr >
+			< tr >
+				< td >
+					确认密码：
+				</ td >
+				< td >
+					< input  type = “ password ”  name = “ pwd2 ”  id = “ pwd2 ” >
+					< span  id = “ spanPwd2 ” > </ span >
+				</ td >
+			</ tr >
+			< tr >
+				< td >
+					< input  type = “ submit ”  name = “ submit ”  value = “注册” >
+				</ td >
+			</ tr >
+		</ table >
+	</ form >
+</ div >
+</ body >
+</ html >
