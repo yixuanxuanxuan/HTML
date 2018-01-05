@@ -1,0 +1,170 @@
+ <!DOCTYPE html > 
+<html > 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>期末demo</title> 
+<style> 
+*{
+  margin:0;
+  padding:0;
+  font-size:15px
+} 
+ul{list-style:none;
+   height:50px;
+   border-bottom:#000000 solid;
+   padding-left:30px
+ }  
+li{float:left;
+  margin-top:20px;
+} 
+a{text-decoration:none;
+  display:block;
+  height:30px;
+  line-height:30px;
+  width:200px;
+  margin-bottom:1px;
+  background:#FFFFFF;
+  color:#000000;
+  text-align:center} 
+.on,a:hover{background:pink;color:white;} 
+</style> 
+<script> 
+ window.onload=function(){ 
+ var A=document.getElementsByTagName("a"); 
+   
+ for(var i=0;i<A.length;i++) 
+ { 
+  A[i].onmouseover=function(){ 
+  clearInterval(this.time); 
+   var This=this; 
+   This.time=setInterval(function(){ 
+     
+   if(This.offsetWidth>=200) 
+    { 
+    clearInterval(This.time); 
+    } 
+   This.style.width=This.offsetWidth+8+"px"; 
+      
+   },50) 
+  } 
+    
+   A[i].onmouseout=function(){ 
+   clearInterval(this.time); 
+   var This=this; 
+   This.time=setInterval(function(){ 
+   if(This.offsetWidth<=120) 
+    { 
+    This.style.width="120px"; 
+    clearInterval(This.time); 
+    } 
+   This.style.width=This.offsetWidth-8+"px"; 
+     
+   },50) 
+  } 
+    
+    
+  } 
+    
+ } 
+   
+ </script> 
+ <style>
+ #wrapper{
+    position: relative;
+    width:200px;
+    height:100px;
+    border:1px solid darkgray;
+}
+#progressbar{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-90px;
+    margin-top:-10px;
+    width:180px;
+    height:20px;
+    border:1px solid darkgray;
+
+}
+/*在进度条元素上调用动画*/
+#fill{
+    animation: move 2s;
+    text-align: center;
+    background-color: #6caf00;
+}
+/*实现元素宽度的过渡动画效果*/
+@keyframes move {
+    0%{
+        width:0;
+
+    }
+    100%{
+        width:100%;
+    }
+}
+
+ </style>
+
+</head> 
+<body style="background-image:url(hua.jpg);background-position:center;">
+
+  <ul> 
+    <li> 
+      <a class="on" href="#">今夕何夕</a> 
+      </li> 
+      <li> <a href="#">南城一梦</a></li> 
+      <li><a href="#">闻到秋光</a></li> 
+      <li><a href="#">沐浴蝉鸣</a></li> 
+      <li><a href="#">山河饮尽须当醉</a></li> 
+      <li><a href="#">凉尘兴败岂堪书</a></li>
+ </ul> 
+<!--外层容器-->
+<div id="wrapper">
+    <!--进度条容器-->
+    <div id="progressbar">
+        <!--用来模仿进度条推进效果的进度条元素-->
+        <div id="fill"></div>
+    </div>
+</div>
+<script>
+var progressbar={
+    init:function(){
+        var fill=document.getElementById('fill');
+        var count=0;
+    //通过间隔定时器实现百分比文字效果,通过计算CSS动画持续时间进行间隔设置
+        var timer=setInterval(function(e){
+            count++;
+            fill.innerHTML=count+'%';
+            if(count===100) clearInterval(timer);
+        },17);
+    }
+};
+progressbar.init();
+</script>
+<a href="http://www.baidu.com">百度一下</a>
+<button type="button" id="open">打开弹出层</button>
+<div style="display: none;background: lightblue;border:1px solid green;" id="toast">     <!--   设置display属性为none以隐藏内容       -->
+  <p>这里是弹出层内容</p>
+  <button type="button" id="close">关闭弹出层</button>
+</div>
+
+
+<script type="text/javascript">
+  var toast = document.getElementById("toast");
+  document.getElementById("open").onclick = function(e){     
+    toast.style.display = "block";
+    toast.style.position = "fixed";
+    var winWidth = window.innerWidth;
+    var winHeight = window.innerHeight;
+    var targetWidth = toast.offsetWidth;
+    var targetHeight = toast.offsetHeight;
+    toast.style.top = (winHeight - targetHeight) / 2 + "px";
+    toast.style.left = (winWidth - targetWidth) / 2 + "px";
+  }
+  document.getElementById("close").onclick = function(e){        <!--   将显示的内容再次隐藏     -->
+    toast.style.display = "none";
+  }
+</script>
+
+<body>
+</html> 
